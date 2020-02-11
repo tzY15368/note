@@ -1,0 +1,19 @@
+.mainFont{
+    font-weight:900;
+    font-size:23px;
+}
+.left{
+    position:fixed;
+    /*margin-right:80%;*/
+    margin-left:5%;
+    width:15%
+}
+.mid{
+    margin-left:28%;
+    width:35%
+}
+.right{
+    margin-top:0px;
+    width:20%;
+    margin-right:15px;
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XHYJlDvnAkOREJR87OgATgL3R0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/main/search" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col\main-disp" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col\main-disp\main-page" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components\editor" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\search" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\configs" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="" />
+      <created>1580704418909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580704418909</updated>
+      <workItem from="1580704422029" duration="3000" />
+      <workItem from="1580788712927" duration="19255000" />
+      <workItem from="1580872171804" duration="20690000" />
+      <workItem from="1580960552070" duration="12800000" />
+      <workItem from="1581046382101" duration="1000" />
+      <workItem from="1581049983140" duration="14570000" />
+      <workItem from="1581162837639" duration="607000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580877035620">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580877035620" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580814716239">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580814716239" />
+    <state x="1473" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1580976458974">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1473" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580976458974" />
+  </component>
+</project>
