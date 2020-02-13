@@ -99,7 +99,7 @@ export default class MySearch extends Component {
 
         return (
             <div>
-                <div style={{position:"fixed",overflow:"hidden","z-index":"1"}}>
+                <div style={{position:"fixed",overflow:"hidden","zIndex":"1"}}>
                     <Search
                         className="searchInput"
                         placeholder="input search text"

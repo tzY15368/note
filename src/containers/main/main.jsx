@@ -26,7 +26,7 @@ class Main extends Component {
             return(<Redirect push to="/user"/>)
         }
         return (
-            <div>
+            <div className="">
                 <div className="row">
                     <div className="col-xs-2 col-xs-offset-2 left" >
                         <LeftCol ToSettings={this.ToSettings}/>

@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="" />
+    <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/containers/before-auth/login-form.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mobile/before-auth/login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mobile/before-auth/register.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mobile/before-auth/user.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mobile/main/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/encrypts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/right-col/search/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/right-col/search/search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +29,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XHYJlDvnAkOREJR87OgATgL3R0" />
   <component name="ProjectViewState">
@@ -26,27 +48,30 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/main/search" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col\main-disp" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col\main-disp\main-page" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components\editor" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\search" />
       <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main" />
       <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components" />
       <recent name="C:\Users\NathanY\Desktop\note-2\note\src" />
       <recent name="C:\Users\NathanY\Desktop\note-2\note\src\configs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\note-2\note\src\mobile\main" />
+      <recent name="D:\github\note-2\note\src" />
+      <recent name="D:\github\note-2\note\src\containers\desktop" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col\main-disp" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\mid-col\main-disp\main-page" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -66,6 +91,8 @@
       <workItem from="1581046382101" duration="1000" />
       <workItem from="1581049983140" duration="14570000" />
       <workItem from="1581162837639" duration="607000" />
+      <workItem from="1581571453606" duration="1180000" />
+      <workItem from="1581572651515" duration="13132000" />
     </task>
     <servers />
   </component>
