@@ -91,8 +91,7 @@ export default class Login extends React.Component{
       const {emailAlert,loginAlert,passwordRequired,emailRequired,loginAlertMsg} = this.state
       return(
           <div>
-            <h2>登陆</h2>
-            <div className="col-xs-6">
+
               <form className="form-horizontal">
                 <div className="form-group">
                   <Input
@@ -121,7 +120,7 @@ export default class Login extends React.Component{
                   <Input.Password
                       prefix={<Icon type="lock"/>}
                       name="password"
-                      placeholder="input password"
+                      placeholder="Enter password"
                       onChange={this.handleChange}
                       allowClear
                   />
@@ -145,7 +144,6 @@ export default class Login extends React.Component{
                 </div>
               </form>
             </div>
-          </div>
       );
     }
 

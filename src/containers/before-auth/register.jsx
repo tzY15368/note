@@ -98,8 +98,7 @@ export default class Register extends React.Component{
             const {emailAlert,usernameAlert,passwordAlert,passwordRequired,emailRequired,usernameRequired,duplicateAlert} = this.state
             return (
                 <div>
-                    <h2>注册</h2>
-                    <div className="col-xs-6">
+
                         <form className="form-horizontal">
                             <div className="form-group">
                                 <Input
@@ -159,7 +158,7 @@ export default class Register extends React.Component{
                             <div className="form-group">
                                 <Input.Password
                                     name="password"
-                                    placeholder="input password"
+                                    placeholder="Enter your password"
                                     onChange={this.handleChange}
                                     allowClear
                                     prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -192,7 +191,6 @@ export default class Register extends React.Component{
 
 
                     </div>
-                </div>
 
             )
         }
