@@ -1,6 +1,6 @@
 import React from 'react'
 import cookie from 'react-cookies'
-import {Button, Icon, Input,message,Alert} from "antd";
+import {Button, Icon, Input,message,Alert,Avatar,Upload} from "antd";
 import BASEURL from "../../configs/names";
 import axios from 'axios'
 import {Redirect} from "react-router-dom";
@@ -18,40 +18,41 @@ export default class Login extends React.Component{
     submitLoading: false,
     redirect:false,
     loginWarningDisp:'none',
-    loginAlertMsg:''
-  }
+    loginAlertMsg:'',
+    avatarSrc:''
+  };
   error = (content) => {
     message.error(content);
   };
   handleChange = (e)=>{
   if (e.target.name==='password'){
-      const content = e.target.value
+      const content = e.target.value;
       this.setState({
         password:content
       })
     }
     else if(e.target.name==='email') {
-      const email = e.target.value
+      const email = e.target.value;
       this.setState({
         email:email
       })
     }
-  }
+  };
   handleSubmit = (e) =>{
     e.preventDefault()
-    console.log(this.state)
-    const {email,password} = this.state
+    //console.log(this.state);
+    const {email,password} = this.state;
     if(password&&email){
       if(ValidateEmail(email)){
-        this.setState({submitLoading:true})
-        const url = BASEURL+'/access'
-        console.log(url)
+        this.setState({submitLoading:true});
+        const url = BASEURL+'/access';
+        //console.log(url);
         axios.post(url, {
           email: email,
           password_hash:encrypt(password)
         })
             .then((res)=>{
-              console.log(res.data)
+              //console.log(res.data)
               if(res.data.code===1002){
                 cookie.save('token',res.data.data.access_token,{path:'/'});
                 this.setState({
@@ -100,6 +101,7 @@ export default class Login extends React.Component{
                       name="email"
                       onChange={this.handleChange}
                       allowClear
+                      onBlur={this.handleBlur}
                   />
                   <Alert
                       message="Invalid Email"

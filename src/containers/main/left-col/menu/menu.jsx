@@ -1,8 +1,10 @@
-import { Menu, Icon, Button,Modal } from 'antd';
+import { Menu, Icon, Button,Modal , Row, Col,Layout} from 'antd';
 
+import {NavLink} from 'react-router-dom'
 import React,{Component} from 'react'
 import MyNavLink from "../../../../components/my-nav-link";
 import MyEditor from "../../../../components/editor";
+const { Header, Content, Footer, Sider } = Layout;
 export default class MyMenu extends Component {
     GoToSettings = () =>{
         console.log('to settings in menu')
@@ -29,7 +31,38 @@ export default class MyMenu extends Component {
     render(){
         const {visible,loading} = this.state
         return (
-            <div  className="left">
+                /*<Sider
+                    breakpoint="lg"
+                    collapsedWidth="0"
+                    onBreakpoint={broken => {
+                        console.log(broken);
+                    }}
+                    onCollapse={(collapsed, type) => {
+                        console.log(collapsed, type);
+                    }}
+                >
+                    <div className="logo" />
+                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+                        <Menu.Item key="1">
+                            <Icon type="user" />
+                            <span className="nav-text">nav 1</span>
+                        </Menu.Item>
+                        <Menu.Item key="2">
+                            <Icon type="video-camera" />
+                            <span className="nav-text">nav 2</span>
+                        </Menu.Item>
+                        <Menu.Item key="3">
+                            <Icon type="upload" />
+                            <span className="nav-text">nav 3</span>
+                        </Menu.Item>
+                        <Menu.Item key="4">
+                            <Icon type="user" />
+                            <span className="nav-text">nav 4</span>
+                        </Menu.Item>
+                    </Menu>
+                </Sider>*/
+
+            <div>
                 <div >
                     <Modal
                         visible={visible}
@@ -47,8 +80,7 @@ export default class MyMenu extends Component {
                 </div>
                 <div className="list-group" style={{"marginTop":"10px"}}>
                     {/*导航路由链接*/}
-                    <MyNavLink to='/main'><h2>Leave notes now</h2></MyNavLink>
-
+                    <NavLink to='/main'><h2>Leave notes now</h2></NavLink>
                 </div>
                 <Menu
                     defaultSelectedKeys={['0']}

@@ -184,7 +184,6 @@ class FrontNotes extends Component {
                         />
                     </Modal>
                 </div>
-                <hr/>
                 <List
                     itemLayout="vertical"
                     size="large"

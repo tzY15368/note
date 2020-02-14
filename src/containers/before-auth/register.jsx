@@ -1,12 +1,29 @@
 import React from 'react'
 import {Switch, Route, Redirect} from 'react-router-dom'
-import {Input, Button, Icon, Alert} from 'antd';
+import {Input, Button, Icon, Alert,message,Upload} from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import axios from 'axios'
 import BASEURL from '../../configs/names'
 import {ErrorMsg, SuccessMsg} from "../../components/notifications";
 import {ValidateEmail,ValidatePassword,ValidateUsername} from "../../utils/validator";
 import {encrypt} from "../../utils/encrypts";
+function getBase64(img, callback) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => callback(reader.result));
+    reader.readAsDataURL(img);
+}
+
+function beforeUpload(file) {
+    const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
+    if (!isJpgOrPng) {
+        message.error('You can only upload JPG/PNG file!');
+    }
+    const isLt2M = file.size / 1024 / 1024 < 2;
+    if (!isLt2M) {
+        message.error('Image must smaller than 2MB!');
+    }
+    return isJpgOrPng && isLt2M;
+}
 export default class Register extends React.Component{
     state = {
         username:'',
@@ -22,7 +39,24 @@ export default class Register extends React.Component{
         submitLoading:false,
         duplicateWarningDisp:'none',
         redirect:false,
-    }
+        uploading:false,
+        imageUrl:''
+    };
+    handleUploadChange = info => {
+        if (info.file.status === 'uploading') {
+            this.setState({ loading: true });
+            return;
+        }
+        if (info.file.status === 'done') {
+            // Get this url from response in real world.
+            getBase64(info.file.originFileObj, imageUrl =>
+                this.setState({
+                    imageUrl,
+                    loading: false,
+                }),
+            );
+        }
+    };
     handleChange = (e) =>{
         if(e.target.name==='username'){
             const username = e.target.value
@@ -61,7 +95,7 @@ export default class Register extends React.Component{
                         if(res.data.code===1001){
                             //注册成功，去登陆
                             this.setState({submitLoading:false})
-                            SuccessMsg('Registration success, redirecting...')
+                            SuccessMsg('Registration success, redirecting...');
                             setTimeout(()=>{this.setState({redirect:true})},2000)
                         } else {
                             if(res.data.code===3){
@@ -88,14 +122,20 @@ export default class Register extends React.Component{
             if(email===''){this.setState({emailRequired:'block'})}
             if(username===''){this.setState({usernameRequired:'block'})}
         }
-    }
+    };
     render() {
         if(this.state.redirect===true){
             return(
                 <Redirect push to="/user/login"/>
             )
         } else {
-            const {emailAlert,usernameAlert,passwordAlert,passwordRequired,emailRequired,usernameRequired,duplicateAlert} = this.state
+            const {emailAlert,usernameAlert,passwordAlert,passwordRequired,emailRequired,usernameRequired,duplicateAlert,imageUrl} = this.state;
+            const uploadButton = (
+                <div>
+                    <Icon type={this.state.loading ? 'loading' : 'plus'} />
+                    <div className="ant-upload-text">Upload</div>
+                </div>
+            );
             return (
                 <div>
 
@@ -179,6 +219,19 @@ export default class Register extends React.Component{
                                 />
                             </div>
                             <div className="form-group">
+                                <Upload
+                                    name="avatar"
+                                    listType="picture-card"
+                                    className="avatar-uploader"
+                                    showUploadList={false}
+                                    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                                    beforeUpload={beforeUpload}
+                                    onChange={this.handleUploadChange}
+                                >
+                                    {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
+                                </Upload>
+                            </div>
+                            <div className="form-group">
                                 <Button
                                     type="primary"
                                     htmlType="submit"
@@ -188,8 +241,6 @@ export default class Register extends React.Component{
                                 >Submit</Button>
                             </div>
                         </form>
-
-
                     </div>
 
             )
