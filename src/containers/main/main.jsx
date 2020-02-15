@@ -58,13 +58,14 @@ class Main extends Component {
                 </Layout>
             </Layout>*/
             <Row>
-                <Col md={{span:3,offset:3}} sm={0} xs={0} >
+
+                <Col md={{span:3,offset:3}} sm={0} xs={0} style={{position:"fixed",overflow:"hidden","zIndex":"1"}}>
                     <div >
                         <LeftCol ToSettings={this.ToSettings}/>
                     </div>
 
                 </Col>
-                <Col md={9} >
+                <Col md={{span:9,offset:6}} >
                     <MainDisp/>
                 </Col>
                 <Col md={{span:6}} sm={0} xs={0} className="right">

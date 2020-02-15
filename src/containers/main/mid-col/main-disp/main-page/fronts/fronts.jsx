@@ -156,34 +156,30 @@ class FrontNotes extends Component {
         console.log(JSON.stringify(this.state.listData))
         //console.log(skeletonAvatar)
         return (
-            <div className="">
-                <div>
-                    <BackTop />
-                </div>
-                <div>
-                    <Modal
-                        visible={visible}
-                        title="编辑"
-                        onOk={this.handleModalOk}
-                        onCancel={this.handleModalCancel}
-                        footer={[
-                            <Button key="back" onClick={this.handleModalCancel}>
-                                Return
-                            </Button>
-                        ]}
-                    >
-                        <MyEditor
-                            editFinish = {this.editFinish}
-                            isUpdate={{
-                                modalContent: this.state.modalContent,
-                                modalQuery_key: this.state.modalQuery_key,
-                                modalTargetId: this.state.modalTargetId,
-                                modalFront:"1",
-                            }}
+            <div>
+                <BackTop />
+                <Modal
+                    visible={visible}
+                    title="编辑"
+                    onOk={this.handleModalOk}
+                    onCancel={this.handleModalCancel}
+                    footer={[
+                        <Button key="back" onClick={this.handleModalCancel}>
+                            Return
+                        </Button>
+                    ]}
+                >
+                    <MyEditor
+                        editFinish = {this.editFinish}
+                        isUpdate={{
+                            modalContent: this.state.modalContent,
+                            modalQuery_key: this.state.modalQuery_key,
+                            modalTargetId: this.state.modalTargetId,
+                            modalFront:"1",
+                        }}
 
-                        />
-                    </Modal>
-                </div>
+                    />
+                </Modal>
                 <List
                     itemLayout="vertical"
                     size="large"

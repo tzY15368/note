@@ -1,6 +1,6 @@
 import React from 'react'
 import cookie from 'react-cookies'
-import {Button, Icon, Input,message,Alert,Avatar,Upload} from "antd";
+import {Button, Icon, Input, message, Alert, Avatar, Tooltip, Modal} from "antd";
 import BASEURL from "../../configs/names";
 import axios from 'axios'
 import {Redirect} from "react-router-dom";
@@ -19,6 +19,8 @@ export default class Login extends React.Component{
     redirect:false,
     loginWarningDisp:'none',
     loginAlertMsg:'',
+    modalLoading: false,
+    modalVisible: false,
     avatarSrc:''
   };
   error = (content) => {
@@ -79,6 +81,21 @@ export default class Login extends React.Component{
       if(email===''){this.setState({emailRequired:'block'})}
     }
   };
+  handleModalOk = () => {
+    this.setState({ modalLoading: true });
+    setTimeout(() => {
+      this.setState({ modalLoading: false, modalVisible: false });
+    }, 3000);
+  };
+  handleModalCancel = () => {
+    this.setState({ modalVisible: false });
+  };
+  loginWith = (target)=>{
+    console.log(target)
+    this.setState({
+      modalVisible:true
+    })
+  }
 
   render() {
 
@@ -89,10 +106,29 @@ export default class Login extends React.Component{
     }
 
     else {
-      const {emailAlert,loginAlert,passwordRequired,emailRequired,loginAlertMsg} = this.state
+      const {emailAlert,loginAlert,passwordRequired,emailRequired,loginAlertMsg,modalVisible,modalLoading} = this.state;
       return(
           <div>
-
+            <Modal
+                visible={modalVisible}
+                title="Title"
+                onOk={this.handleModalOk}
+                onCancel={this.handleModalCancel}
+                footer={[
+                  <Button key="back" onClick={this.handleModalCancel}>
+                    Return
+                  </Button>,
+                  <Button key="submit" type="primary" loading={modalLoading} onClick={this.handleModalOk}>
+                    Submit
+                  </Button>,
+                ]}
+            >
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+            </Modal>
               <form className="form-horizontal">
                 <div className="form-group">
                   <Input
@@ -142,7 +178,13 @@ export default class Login extends React.Component{
                       icon="check"
                       onClick={this.handleSubmit}
                       loading={this.state.submitLoading}
-                  >Submit</Button>
+                  >Submit</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Login with
+                  <Tooltip placement="topLeft" title="Bit account" arrowPointAtCenter>
+                    <Button type="link" size="small" onClick={this.loginWith.bind(this,'bit')}>
+                      <Avatar shape="square" size="small" src="https://www.dutbit.com/enroll/static/favicon.ico"/>
+                    </Button>
+                  </Tooltip>
                 </div>
               </form>
             </div>

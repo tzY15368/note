@@ -16,7 +16,7 @@ if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
     UA = 'PHONE'
 }
 console.log('ua:'+UA)
-if(UA==='PC'){
+if(true){
     ReactDom.render((
         <Provider store={store}>
             <HashRouter>

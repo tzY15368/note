@@ -62,7 +62,7 @@ export default class MyMenu extends Component {
                     </Menu>
                 </Sider>*/
 
-            <div>
+            <div >
                 <div >
                     <Modal
                         visible={visible}

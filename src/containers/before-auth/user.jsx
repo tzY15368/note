@@ -5,6 +5,7 @@ import MyNavLink from '../../components/my-nav-link'
 import Login from './login'
 import Register from './register'
 import Header from "./header";
+import LoginFrom from "./login-from";
 export default class User extends React.Component {
     render(){
         return (
