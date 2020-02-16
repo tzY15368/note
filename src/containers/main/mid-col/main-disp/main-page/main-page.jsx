@@ -8,6 +8,7 @@ import Alerts from "./alerts/alerts";
 import MobileNav from "./nav-bar-mobile/nav";
 import MySearch from "../../../right-col/search/search";
 import './main-page.css'
+import Settings from "../setting/setting";
 export default class MainPage extends Component {
     handleRedirect = (target) =>{
         this.props.history.push(target)
@@ -15,9 +16,16 @@ export default class MainPage extends Component {
     render(){
         return (
             <Row>
-                <Col md={24} sm={24} xs={24}>
+                <Col md={24} sm={24} xs={24} style={{marginBottom:43}}>
                     <div className="panel">
-                        <Col md={24} sm={0} xs={0}>
+                        <Switch>
+                            <Route path='/main/front' component={FrontNotes}/>
+                            <Route path='/main/alert' component={Alerts}/>
+                            <Route path='/main/search' component={MySearch}/>
+                            <Route path='/main/settings' component={Settings}/>
+                            <Redirect to='/main/front'/>
+                        </Switch>
+                        {/*<Col md={24} sm={0} xs={0}>
                             <HeaderMidMainDisp/>
                             <div className="panel-body">
                                 <MyEditor/>
@@ -31,12 +39,12 @@ export default class MainPage extends Component {
                                 <Route path='/main/search' component={MySearch}/>
                                 <Redirect to='/main/front'/>
                             </Switch>
-                        </Col>
+                        </Col>*/}
 
                     </div>
                 </Col>
-                <Col xl={0} lg={0} md={0} sm={24} xs={24} style={{overflow:"hidden",transparent:0}}>
-                    <div className="navbar-fixed-bottom mobile-nav-bar" >
+                <Col xl={0} lg={0} md={0} sm={24} xs={24} >
+                    <div className="navbar-fixed-bottom " style={{overflow:"hidden",transparent:0,background:"#E6E6FA"}} >
                         <MobileNav handleRedirect = {this.handleRedirect}/>
                     </div>
 
