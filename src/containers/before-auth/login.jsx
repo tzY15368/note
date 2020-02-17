@@ -7,6 +7,7 @@ import {Redirect} from "react-router-dom";
 import {ErrorMsg} from "../../components/notifications"
 import {ValidateEmail} from "../../utils/validator";
 import {encrypt} from "../../utils/encrypts";
+import LoginFrom from "./login-from";
 export default class Login extends React.Component{
   state = {
     email:'',
@@ -123,11 +124,9 @@ export default class Login extends React.Component{
                   </Button>,
                 ]}
             >
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
+              <LoginFrom>
+
+              </LoginFrom>
             </Modal>
               <form className="form-horizontal">
                 <div className="form-group">

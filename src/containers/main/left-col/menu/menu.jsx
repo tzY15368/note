@@ -11,10 +11,20 @@ export default class MyMenu extends Component {
         this.props.ToSettings()
 
         //this.props.history.push('/settings')
-    }
-    state = {
-        visible:false,
-        loading:false
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible:false,
+            loading:false,
+            showHeader:'block'
+        };
+        //console.log(JSON.stringify(props));
+        if(props.showHeader!==undefined){
+            console.log(props.showHeader);
+            this.state.showHeader=props.showHeader
+        }
     }
     handleModalCancel = () => {
         this.setState({ visible: false });
@@ -31,37 +41,6 @@ export default class MyMenu extends Component {
     render(){
         const {visible,loading} = this.state
         return (
-                /*<Sider
-                    breakpoint="lg"
-                    collapsedWidth="0"
-                    onBreakpoint={broken => {
-                        console.log(broken);
-                    }}
-                    onCollapse={(collapsed, type) => {
-                        console.log(collapsed, type);
-                    }}
-                >
-                    <div className="logo" />
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-                        <Menu.Item key="1">
-                            <Icon type="user" />
-                            <span className="nav-text">nav 1</span>
-                        </Menu.Item>
-                        <Menu.Item key="2">
-                            <Icon type="video-camera" />
-                            <span className="nav-text">nav 2</span>
-                        </Menu.Item>
-                        <Menu.Item key="3">
-                            <Icon type="upload" />
-                            <span className="nav-text">nav 3</span>
-                        </Menu.Item>
-                        <Menu.Item key="4">
-                            <Icon type="user" />
-                            <span className="nav-text">nav 4</span>
-                        </Menu.Item>
-                    </Menu>
-                </Sider>*/
-
             <div >
                 <div >
                     <Modal
@@ -78,7 +57,7 @@ export default class MyMenu extends Component {
                         <MyEditor newFinish = {this.newFinish} isNew={true}/>
                     </Modal>
                 </div>
-                <div className="list-group" style={{"marginTop":"10px"}}>
+                <div className="list-group" style={{"marginTop":"10px",display:this.state.showHeader}}>
                     {/*导航路由链接*/}
                     <NavLink to='/main'><h2>Leave notes now</h2></NavLink>
                 </div>
@@ -91,33 +70,33 @@ export default class MyMenu extends Component {
                 >
                     <Menu.Item key="0">
                         <MyNavLink to='/main'>
-                            <Icon type="home" />
-                            <span>主页</span>
+                            <Icon type="home" style={{ fontSize: '18px'}}/>
+                            <span style={{ fontSize: '16px'}}>主页</span>
                         </MyNavLink>
                     </Menu.Item>
                     <Menu.Item key="3">
-                        <Icon type="notification" />
-                        <span>提醒</span>
+                        <Icon type="notification" style={{ fontSize: '18px'}}/>
+                        <span style={{ fontSize: '16px'}}>提醒</span>
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <Icon type="share-alt" />
-                        <span>分享</span>
+                        <Icon type="share-alt" style={{ fontSize: '18px'}}/>
+                        <span style={{ fontSize: '16px'}}>分享</span>
                     </Menu.Item>
                     <Menu.Item key="4">
-                        <Icon type="calendar" />
-                        <span>日程</span>
+                        <Icon type="calendar" style={{ fontSize: '18px'}}/>
+                        <span style={{ fontSize: '16px'}}>日程</span>
                     </Menu.Item>
                     <Menu.Item key="5">
-                        <Icon type="message" />
-                        <span>消息</span>
+                        <Icon type="message" style={{ fontSize: '18px'}}/>
+                        <span style={{ fontSize: '16px'}}>消息</span>
                     </Menu.Item>
                     <Menu.Item key="6">
-                        <Icon type="more" />
-                        <span>更多</span>
+                        <Icon type="more" style={{ fontSize: '18px'}}/>
+                        <span style={{ fontSize: '16px'}}>更多</span>
                     </Menu.Item>
                     <Menu.Item key="7" onClick={this.GoToSettings}>
-                        <Icon type="setting" />
-                        <span>Setting</span>
+                        <Icon type="setting" style={{ fontSize: '18px'}}/>
+                        <span style={{ fontSize: '16px'}}>Setting</span>
                     </Menu.Item>
                 </Menu>
                 <Button type="primary" icon="edit" block onClick={this.handleNew}>New</Button>
