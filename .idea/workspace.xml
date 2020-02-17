@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/nav-bar-mobile/nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/nav-bar-mobile/nav.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,12 +81,24 @@
       <workItem from="1581741367920" duration="7847000" />
       <workItem from="1581827998449" duration="4436000" />
       <workItem from="1581836621902" duration="118000" />
-      <workItem from="1581912777161" duration="9919000" />
+      <workItem from="1581912777161" duration="10195000" />
     </task>
+    <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
+      <created>1581923377599</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581923377599</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="twitter-styled slide menu, animations bugged, fixing tomorrow." />
+    <option name="LAST_COMMIT_MESSAGE" value="twitter-styled slide menu, animations bugged, fixing tomorrow." />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580877035620">
@@ -102,6 +109,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580814716239" />
+    <state x="560" y="112" key="CommitChangelistDialog2" timestamp="1581923377073">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581923377073" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581831097375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
