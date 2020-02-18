@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/fronts/fronts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/fronts/fronts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/header-mid-main-disp/header-mid-main-disp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/header-mid-main-disp/header-mid-main-disp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/nav-bar-mobile/nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/nav-bar-mobile/nav.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +92,8 @@
       <workItem from="1581827998449" duration="4436000" />
       <workItem from="1581836621902" duration="118000" />
       <workItem from="1581912777161" duration="10195000" />
+      <workItem from="1581955852004" duration="168000" />
+      <workItem from="1581993699882" duration="7210000" />
     </task>
     <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
       <created>1581923377599</created>
@@ -105,10 +117,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580877035620" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580814716239">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582004550347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580814716239" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582004550347" />
     <state x="560" y="112" key="CommitChangelistDialog2" timestamp="1581923377073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
