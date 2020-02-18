@@ -19,7 +19,7 @@ class Main extends Component {
     };
 
     ToSettings = () =>{
-        this.props.history.push('/settings')
+        this.props.history.push('/main/settings')
     };
     render(){
         const token = cookie.load('token');

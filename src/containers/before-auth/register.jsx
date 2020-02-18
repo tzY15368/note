@@ -151,7 +151,7 @@ export default class Register extends React.Component{
                                 <Alert
                                     message="Email required"
                                     type="warning"
-                                    closable
+                                    /*closable*/
                                     showIcon
                                     style={{marginTop:"10px",display:emailRequired}}
                                 />
@@ -159,14 +159,14 @@ export default class Register extends React.Component{
                                     message="Invalid Email"
                                     type="error"
                                     showIcon
-                                    closable
+                                    /*closable*/
                                     style={{marginTop:"10px",display:emailAlert}}
                                 />
                                 <Alert
                                     message="Duplicate Email"
                                     type="error"
                                     showIcon
-                                    closable
+                                    /*closable*/
                                     style={{marginTop:"10px",display:duplicateAlert}}
                                 />
 
@@ -183,7 +183,7 @@ export default class Register extends React.Component{
                                 <Alert
                                     message="Username required"
                                     type="warning"
-                                    closable
+                                    /*closable*/
                                     showIcon
                                     style={{marginTop:"10px",display:usernameRequired}}
                                 />
@@ -191,7 +191,7 @@ export default class Register extends React.Component{
                                     message="Invalid username"
                                     type="error"
                                     showIcon
-                                    closable
+                                    /*closable*/
                                     style={{marginTop:"10px",display:usernameAlert}}
                                 />
                             </div>
@@ -206,7 +206,7 @@ export default class Register extends React.Component{
                                 <Alert
                                     message="Password required"
                                     type="warning"
-                                    closable
+                                    /*closable*/
                                     showIcon
                                     style={{marginTop:"10px",display:passwordRequired}}
                                 />
@@ -214,7 +214,7 @@ export default class Register extends React.Component{
                                     message="Invalid password"
                                     type="error"
                                     showIcon
-                                    closable
+                                    /*closable*/
                                     style={{marginTop:"10px",display:passwordAlert}}
                                 />
                             </div>

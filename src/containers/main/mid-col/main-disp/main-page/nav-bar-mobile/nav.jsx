@@ -74,11 +74,6 @@ export default class MobileNav extends Component {
                 <Col md={0} xs={6} sm={6} >
                     <Col md={0} xs={{span:8,offset:6}}>
                         <div className="col-div">
-                            {/*<Dropdown overlay={menu} placement="topRight" trigger={['click']}>
-                                <Button type="link">
-                                    <Icon type="more" style={{ fontSize: '20px',color: this.state.selection[3]}}/>
-                                </Button>
-                            </Dropdown>*/}
                             <Button type="link" onClick={this.props.toggleSideMenu}>
                                 <Icon type="more" style={{ fontSize: '20px',color: this.state.selection[3]}}/>
                             </Button>
@@ -86,7 +81,6 @@ export default class MobileNav extends Component {
                     </Col>
                 </Col>
             </Row>
-
         )
     }
 }

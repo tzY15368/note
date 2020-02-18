@@ -142,12 +142,12 @@ export default class Login extends React.Component{
                       message="Invalid Email"
                       type="error"
                       showIcon
-                      closable
+                      /*closable*/
                       style={{marginTop:"10px",display:emailAlert}}/>
                   <Alert
                       message="Email required"
                       type="warning"
-                      closable
+                      /*closable*/
                       /*onClose={onClose}*/
                       showIcon
                       style={{marginTop:"10px",display:emailRequired}}
@@ -165,7 +165,7 @@ export default class Login extends React.Component{
                   <Alert
                       message="Password required"
                       type="warning"
-                      closable
+                      /*closable*/
                       showIcon
                       style={{marginTop:"10px",display:passwordRequired}}
                   />
