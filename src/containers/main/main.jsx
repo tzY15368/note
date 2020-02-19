@@ -28,37 +28,7 @@ class Main extends Component {
             return(<Redirect push to="/user"/>)
         }
         return (
-            /*<div className="">
-                <div className="row">
-                    <div className="col-xs-2 col-xs-offset-2 left" >
-                        <LeftCol ToSettings={this.ToSettings}/>
-                    </div>
-                    <div className="col-xs-4 mid">
-                        <MainDisp/>
-                    </div>
-                    <div className="col-xs-2 right">
-                        <MySearch/>
-                    </div>
-                </div>
-            </div>*/
-            /*<Layout>
-                <Sider>
-                    <LeftCol ToSettings={this.ToSettings}/>
-                </Sider>
-                <Layout>
-                    <Row>
-                        <Col md={10} sm={20} xs={20} className="mid">
-                            <MainDisp/>
-                        </Col>
-                        <Col md={{span:5}} sm={0} xs={0} className="right">
-                            <MySearch/>
-                        </Col>
-                    </Row>
-                    </Row>
-                </Layout>
-            </Layout>*/
             <Row>
-
                 <Col md={{span:3,offset:3}} sm={0} xs={0} style={{position:"fixed",overflow:"hidden","zIndex":"1"}}>
                     <div >
                         <LeftCol ToSettings={this.ToSettings}/>

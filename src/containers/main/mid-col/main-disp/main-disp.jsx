@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import Settings from "./setting/setting";
+import Settings from "./main-page/setting/setting";
 import {Redirect, Route, Switch} from "react-router-dom";
 import MainPage from "./main-page/main-page";
 export default class MainDisp extends Component {

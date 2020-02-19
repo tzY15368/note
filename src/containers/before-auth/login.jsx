@@ -161,7 +161,13 @@ export default class Login extends React.Component{
                       onChange={this.handleChange}
                       allowClear
                   />
-                  <Alert message={loginAlertMsg} type="error" icon=<Icon type="question"/> showIcon closable style={{marginTop:"10px",display:loginAlert}}/>
+                  <Alert
+                      message={loginAlertMsg}
+                      type="error"
+                      icon=<Icon type="question"/>
+                      showIcon
+                  style={{marginTop:"10px",display:loginAlert}}
+                  />
                   <Alert
                       message="Password required"
                       type="warning"

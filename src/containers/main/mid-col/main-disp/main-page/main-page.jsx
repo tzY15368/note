@@ -8,14 +8,14 @@ import Alerts from "./alerts/alerts";
 import MobileNav from "./nav-bar-mobile/nav";
 import MySearch from "../../../right-col/search/search";
 import './main-page.css'
-import Settings from "../setting/setting";
+import Settings from "./setting/setting";
 import MyMenu from "../../../left-col/menu/menu";
 import {Motion, spring} from "react-motion";
 export default class MainPage extends Component {
     state = {
         sideMenuDisp:'none',
         open:false,
-        location:'/main/front'
+        location:'/main/front',
     };
     handleRedirect = (target) =>{
         this.setState({location:target});
@@ -29,7 +29,7 @@ export default class MainPage extends Component {
         const {sideMenuDisp,location} = this.state;
         return (
             <Row>
-                <Col md={24} sm={24} xs={24} style={{marginBottom:43}}>
+                <Col md={24} sm={24} xs={24} style={{marginBottom:43,"zIndex":"2"}}>
                     <div className="panel">
                         <Col md={24} sm={24} xs={24} onClick={this.toggleSideMenu}>
                             <HeaderMidMainDisp location={location} />
@@ -44,12 +44,12 @@ export default class MainPage extends Component {
                         </Switch>
                     </div>
                 </Col>
-                <Col md={0} lg={0} xl={0} sm={24} xs={24} style={{position:"fixed",overflow:"hidden","zIndex":"1",height:"100%",background:'rgba(0, 0, 0, .50)',display:sideMenuDisp}} className="side-menu">
-                    <Motion style={{x: spring(this.state.open ? 41.67 : 100)}}>
-                        {({x}) =>
-                            // children is a callback which should accept the current value of
-                            // `style`
-                                <Col md={0} lg={0} xl={0} sm={14} xs={14} style={{position:"absolute",overflow:"hidden","zIndex":"2",height:"100%",background:'#ffffff',
+                    <Col md={0} lg={0} xl={0} sm={24} xs={24} style={{position:"fixed","zIndex":"2",overflow:"hidden",height:"100%",background:'rgba(0, 0, 0, .50)',display:sideMenuDisp}} className="side-menu">
+                        <Motion style={{x: spring(this.state.open ? 41.67 : 100)}}>
+                            {({x}) =>
+                                // children is a callback which should accept the current value of
+                                // `style`
+                                <Col md={0} lg={0} xl={0} sm={14} xs={14} style={{position:"absolute",overflow:"hidden","zIndex":"3",height:"100%",background:'#ffffff',
                                     /*WebkitTransform: `translate3d(${x}px, 0, 0)`,
                                     transform: `translate3d(${x}px, 0, 0)`*/
                                     right:`${x}%`}}
@@ -63,19 +63,19 @@ export default class MainPage extends Component {
                                     <Divider/>
                                     <MyMenu showHeader={'none'} handleRedirect = {this.handleRedirect} toggleMenu={this.toggleSideMenu}/>
                                 </Col>
-                        }
-                    </Motion>
+                            }
+                        </Motion>
 
-                    <Col md={0} lg={0} xl={0} sm={{span:10,offset:14}} xs={{span:10,offset:14}} onClick={this.toggleSideMenu} style={{position:"fixed",overflow:"hidden","zIndex":"3",height:"100%"}}>
-                        {/*点击并收起区*/}
+                        <Col md={0} lg={0} xl={0} sm={{span:10,offset:14}} xs={{span:10,offset:14}} onClick={this.toggleSideMenu} style={{position:"fixed",overflow:"hidden","zIndex":"1",height:"100%"}}>
+                            {/*点击并收起区*/}
+                        </Col>
                     </Col>
-                </Col>
-                <Col xl={0} lg={0} md={0} sm={24} xs={24} >
-                    <div className="navbar-fixed-bottom " style={{overflow:"hidden",transparent:0,background:"#E6E6FA"}} >
-                        <MobileNav handleRedirect = {this.handleRedirect} toggleSideMenu = {this.toggleSideMenu}/>
-                    </div>
+                    <Col xl={0} lg={0} md={0} sm={24} xs={24} >
+                        <div className="navbar-fixed-bottom " style={{overflow:"hidden",transparent:0,background:"#E6E6FA"}} >
+                            <MobileNav handleRedirect = {this.handleRedirect} toggleSideMenu = {this.toggleSideMenu} location={location}/>
+                        </div>
 
-                </Col>
+                    </Col>
             </Row>
 
         )

@@ -6,6 +6,13 @@ export default class MobileNav extends Component {
     state = {
         selection:['red','#08c','#08c','#08c'],
     };
+    componentWillReceiveProps(nextProps, nextContext) {
+        if(nextProps.location!=='/main/front'&&nextProps.location!=='/main/alert'&&nextProps.location!=='/main/search'){
+            let newSelection = ['#08c','#08c','#08c','red'];
+            this.setState({selection:newSelection});
+        }
+    }
+
     handleClick = (targetUrl,index)=>{
         console.log(index+'------------')
         let newSelection = ['#08c','#08c','#08c','#08c'];
@@ -22,26 +29,6 @@ export default class MobileNav extends Component {
         this.props.handleRedirect(targetUrl)
     }
     render(){
-        const menu = (
-            <Menu>
-                <Menu.Item key="2">
-                    <Icon type="share-alt" style={{ fontSize: '20px'}}/>
-                    <span style={{ fontSize: '18px'}}>分享</span>
-                </Menu.Item>
-                <Menu.Item key="4">
-                    <Icon type="calendar" style={{ fontSize: '20px'}}/>
-                    <span style={{ fontSize: '18px'}}>日程</span>
-                </Menu.Item>
-                <Menu.Item key="5" >
-                    <Icon type="message" style={{ fontSize: '20px'}}/>
-                    <span style={{ fontSize: '18px'}}>消息</span>
-                </Menu.Item>
-                <Menu.Item key="7" onClick={this.handleMore.bind(this,'/main/settings')}>
-                    <Icon type="setting" style={{ fontSize: '20px'}}/>
-                    <span style={{ fontSize: '18px'}}>Setting</span>
-                </Menu.Item>
-            </Menu>
-        );
         return (
             <Row type="flex" style={{}} className="mobile-nav-bar">
                 <Col md={0} xs={6} sm={6}>
