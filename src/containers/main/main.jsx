@@ -12,9 +12,9 @@ const { Header, Content, Footer, Sider } = Layout;
 class Main extends Component {
     dojump = () =>{
         this.props.history.replace('/user/login')
-    }
+    };
     componentWillMount = () =>{
-        console.log('now mounting main');
+        //console.log('now mounting main');
         this.props.GetUserInfo()
     };
 

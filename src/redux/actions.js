@@ -28,7 +28,7 @@ export const GetUserInfo = () =>{
             const response = await axios.get(url, {
                 headers:{token:token}
             })
-            console.log(response)
+            //console.log('response:'+JSON.stringify(response))
             const result = response.data
             if (result.code === 1001) {
                 //分发成功action

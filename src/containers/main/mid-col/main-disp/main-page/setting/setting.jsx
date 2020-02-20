@@ -5,42 +5,41 @@ import SettingMenuDesktop from "./setting-menu/setting-menu-desktop";
 import {Redirect, Route, Switch} from "react-router-dom";
 import Login from "../../../../../before-auth/login";
 import Register from "../../../../../before-auth/register";
-import MyProfile from "./setting-pages/profile/profile";
+import ProfileAmend from "./setting-pages/profile/profile-amend";
 import MyPrivacy from "./setting-pages/privacy/privacy";
 import MySecurity from "./setting-pages/security/security";
-
+import {GetUserInfo} from '../../../../../../redux/actions'
 class Settings extends Component {
-    componentDidMount() {
-        console.log(this.props.user)
+    componentWillMount() {
+        //console.log('now mounting profile-amend');
+        this.props.GetUserInfo()
     }
     handleClick = e => {
         console.log('click ', e);
     };
+    handleRedirect = target =>{
+        this.props.history.push(target)
+    }
     render() {
         return (
-            <Col xs={0} sm={0} md={24} lg={24} xl={24}>
-                <Row>
-                    <Col xs={0} sm={0} md={9} lg={9} xl={9}>
-                        <SettingMenuDesktop/>
-                    </Col>
-                    <Col xs={0} sm={0} md={{span:15,offset:9}} lg={{span:15,offset:9}} xl={{span:15,offset:9}}>
-                        <Switch>
-                            <Route path='/main/settings/privacy' component={MyPrivacy}/>
-                            <Route path='/main/settings/profile' component={MyProfile}/>
-                            <Route path='/main/settings/security' component={MySecurity}/>
-                            <Redirect to='/main/settings'/>
-                        </Switch>
-                    </Col>
-                </Row>
-
+            <Col md={24}>
+                <Col md={9}  xs={0} sm={0} >
+                    <SettingMenuDesktop handleRedirect={this.handleRedirect}/>
+                </Col>
+                <Col md={{span:14,offset:1}}  xs={0} sm={0} >
+                    <Switch>
+                        <Route path='/main/settings/privacy' component={MyPrivacy}/>
+                        <Route path='/main/settings/profile' component={ProfileAmend}/>
+                        <Route path='/main/settings/security' component={MySecurity}/>
+                        <Redirect to='/main/settings'/>
+                    </Switch>
+                </Col>
             </Col>
-
-
         );
     }
 }
 
 
 export default connect(
-    state =>({user:state.user}),{}
+    state =>({user:state.user}),{GetUserInfo}
 )(Settings)

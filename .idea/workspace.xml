@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/privacy/privacy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/bottom/mobile-tabbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/displayer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/displayer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-disp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-disp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/nav-bar-mobile/nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/nav-bar-mobile/nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/setting/setting.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/header-mid-main-disp/header-mid-main-disp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/header-mid-main-disp/header-mid-main-disp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile-amend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +94,8 @@
       <workItem from="1581993699882" duration="7210000" />
       <workItem from="1582007459469" duration="57000" />
       <workItem from="1582082363275" duration="9024000" />
+      <workItem from="1582168828629" duration="6907000" />
+      <workItem from="1582186940043" duration="2461000" />
     </task>
     <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
       <created>1581923377599</created>
@@ -138,9 +131,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581831097375" />
-    <state x="1473" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1580976458974">
+    <state x="1473" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1582169359556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1473" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580976458974" />
+    <state x="1473" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582169359556" />
   </component>
 </project>

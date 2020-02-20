@@ -6,7 +6,7 @@ class HeaderMidMainDisp extends Component {
         headerSuffix:'主页'
     };
     componentWillReceiveProps(nextProps, nextContext) {
-        console.log('new location:'+nextProps.location);
+        //console.log('new location:'+nextProps.location);
         this.setState({location:nextProps.location});
         const newLocation = nextProps.location;
         let suffix='主页';
@@ -20,7 +20,7 @@ class HeaderMidMainDisp extends Component {
     }
 
     render(){
-        console.log('rendering location:'+this.state.location);
+        //console.log('rendering location:'+this.state.location);
         return (
             <div className="panel-heading">
                 <h2 className="panel-title mainFont" style={{marginTop:"5px"}}>

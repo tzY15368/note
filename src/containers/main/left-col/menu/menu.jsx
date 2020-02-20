@@ -97,10 +97,10 @@ export default class MyMenu extends Component {
                             <Icon type="message" style={{ fontSize: '18px'}}/>
                             <span style={{ fontSize: '16px'}}>消息</span>
                         </Menu.Item>
-                        {/*<Menu.Item key="6">
+                        <Menu.Item key="6">
                             <Icon type="more" style={{ fontSize: '18px'}}/>
                             <span style={{ fontSize: '16px'}}>更多</span>
-                        </Menu.Item>*/}
+                        </Menu.Item>
                         <Menu.Item key="7" onClick={this.GoToSettings}>
                             <Icon type="setting" style={{ fontSize: '18px'}}/>
                             <span style={{ fontSize: '16px'}}>Setting</span>

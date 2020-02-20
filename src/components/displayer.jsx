@@ -27,11 +27,11 @@ class MyDisplayer extends Component {
         //老的数据：this.state.listData
         //全部更新：nextprops.newListData
         //更新回来的一个：nextProps.newNote
-        console.log('++++++'+nextProps.loadingState)
+        //console.log('++++++'+nextProps.loadingState)
         this.setState({
             loading:nextProps.loadingState
         })
-        console.log('next props loading state'+nextProps.loadingState)
+        //console.log('next props loading state'+nextProps.loadingState)
         if(nextProps.newListData!==undefined){//全部更新的情况
             if(nextProps.newListData!==[]){
                 this.setState({
@@ -47,41 +47,41 @@ class MyDisplayer extends Component {
         } else if(nextProps.newNote!==undefined){//比对原有和更新回来一个数据
             if(this.state.listData.length!==0){
                 if(nextProps.newNote.id>this.state.listData[0].id){
-                    console.log(JSON.stringify(nextProps.newNote))
-                    console.log('this is new')
+                    //console.log(JSON.stringify(nextProps.newNote))
+                    //console.log('this is new')
                     let latest_id = this.state.listData[0].id
                     if(nextProps.newNote.id!==0&&nextProps.newNote.id!==latest_id){
-                        console.log('!=0')
+                        //console.log('!=0')
                         let oldNotes = this.state.listData
                         oldNotes.unshift(nextProps.newNote)
                         this.setState({listData:oldNotes})
-                        console.log('set success')
+                        //console.log('set success')
                     }
                 }
                 else {
-                    console.log('this is an update')
+                    //console.log('this is an update')
                     //console.log(JSON.stringify(this.state.listData))
-                    console.log('newnote:'+JSON.stringify(nextProps.newNote))
+                    //console.log('newnote:'+JSON.stringify(nextProps.newNote))
                     let newListData = this.state.listData
                     for(let i=0;i<this.state.listData.length;i++){
                         if(this.state.listData[i].id===nextProps.newNote.id){
-                            console.log(nextProps.newNote.id)
-                            console.log(newListData[i])
+                            //console.log(nextProps.newNote.id)
+                            //console.log(newListData[i])
                             newListData[i] = nextProps.newNote
                             break
                         }
                     }
                     this.setState({listData:newListData})
-                    console.log('finish')
+                    //console.log('finish')
                 }
 
 
             } else {
                 if(nextProps.newNote.id!==0){
-                    console.log('!=0')
+                    //console.log('!=0')
                     let oldNotes = this.state.listData
                     oldNotes.unshift(nextProps.newNote)
-                    console.log('set success')
+                    //console.log('set success')
                     //result.unshift(this.props.newNote)
                 }
             }
