@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/my-profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/my-security.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-history.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-keys.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-logout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-rm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/displayer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/displayer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/header-mid-main-disp/header-mid-main-disp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/header-mid-main-disp/header-mid-main-disp.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile-amend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile-amend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile-amend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-psw-change.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/main/search" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -50,19 +54,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\search" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src" />
-      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\configs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\github\note-2\note\src\containers\main\mid-col\main-disp\main-page\setting\setting-pages\security" />
       <recent name="D:\github\note-2\note\src\containers\main\mid-col\main-disp\main-page\setting\setting-pages\profile" />
       <recent name="D:\github\note-2\note\src\containers\main\mid-col\main-disp\main-page\setting\setting-pages\privacy" />
       <recent name="D:\github\note-2\note\src\containers\main\mid-col\main-disp\main-page" />
       <recent name="D:\github\note-2\note\src\mobile\main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\note-2\note\src\containers\main\mid-col\main-disp\main-page\setting\setting-pages\security" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main\search" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\containers\main" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src\components" />
+      <recent name="C:\Users\NathanY\Desktop\note-2\note\src" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -96,6 +100,9 @@
       <workItem from="1582082363275" duration="9024000" />
       <workItem from="1582168828629" duration="6907000" />
       <workItem from="1582186940043" duration="2461000" />
+      <workItem from="1582257158058" duration="2170000" />
+      <workItem from="1582259409581" duration="4582000" />
+      <workItem from="1582340431701" duration="6824000" />
     </task>
     <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
       <created>1581923377599</created>
@@ -115,10 +122,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="twitter-styled slide menu, animations bugged, fixing tomorrow." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580877035620">
+    <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582259615879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580877035620" />
+    <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582259615879" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582084107635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -127,6 +134,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581923377073" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1582273260671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582273260671" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581831097375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

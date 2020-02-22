@@ -7,8 +7,7 @@ import './main.css'
 import LeftCol from "./left-col/left-col";
 import cookie from "react-cookies";
 import {Redirect} from "react-router-dom";
-import {Col, Layout, Row} from "antd";
-const { Header, Content, Footer, Sider } = Layout;
+import {Col, Row} from "antd";
 class Main extends Component {
     dojump = () =>{
         this.props.history.replace('/user/login')

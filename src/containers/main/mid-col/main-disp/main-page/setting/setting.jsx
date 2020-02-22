@@ -3,11 +3,9 @@ import {connect} from 'react-redux'
 import {Col,Row} from 'antd';
 import SettingMenuDesktop from "./setting-menu/setting-menu-desktop";
 import {Redirect, Route, Switch} from "react-router-dom";
-import Login from "../../../../../before-auth/login";
-import Register from "../../../../../before-auth/register";
-import ProfileAmend from "./setting-pages/profile/profile-amend";
+import MyProfile from "./setting-pages/profile/profile-amend";
 import MyPrivacy from "./setting-pages/privacy/privacy";
-import MySecurity from "./setting-pages/security/security";
+import MySecurity from "./setting-pages/security/my-security";
 import {GetUserInfo} from '../../../../../../redux/actions'
 class Settings extends Component {
     componentWillMount() {
@@ -29,7 +27,7 @@ class Settings extends Component {
                 <Col md={{span:14,offset:1}}  xs={0} sm={0} >
                     <Switch>
                         <Route path='/main/settings/privacy' component={MyPrivacy}/>
-                        <Route path='/main/settings/profile' component={ProfileAmend}/>
+                        <Route path='/main/settings/profile' component={MyProfile}/>
                         <Route path='/main/settings/security' component={MySecurity}/>
                         <Redirect to='/main/settings'/>
                     </Switch>

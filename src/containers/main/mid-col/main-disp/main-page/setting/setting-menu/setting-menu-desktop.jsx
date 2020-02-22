@@ -37,7 +37,7 @@ export default class SettingMenuDesktop extends Component {
                     }
                 >
                     <SubMenu key="sub9" title={<span><Icon type="user"/><span>账号管理</span></span>}>
-                        <Menu.Item key="7" onClick={this.handleClick.bind(this,'/main/settings/security/amend')}><Icon type="key"/>更改密码</Menu.Item>
+                        <Menu.Item key="7" onClick={this.handleClick.bind(this,'/main/settings/security/pass')}><Icon type="key"/>更改密码</Menu.Item>
                         <Menu.Item key="8" onClick={this.handleClick.bind(this,'/main/settings/security/rm')}><Icon type="delete" style={{color: 'red'}}/>删除账号</Menu.Item>
                     </SubMenu>
                     <Menu.Item key="10" onClick={this.handleClick.bind(this,'/main/settings/security/history')}><Icon type="history"/>登陆记录</Menu.Item>
