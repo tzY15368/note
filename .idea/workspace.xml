@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/my-profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/my-security.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-history.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-keys.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-logout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-rm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-menu/setting-menu-desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile-amend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/profile/profile-amend.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-psw-change.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-logout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-logout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-psw-change.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-psw-change.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +93,8 @@
       <workItem from="1582186940043" duration="2461000" />
       <workItem from="1582257158058" duration="2170000" />
       <workItem from="1582259409581" duration="4582000" />
-      <workItem from="1582340431701" duration="6824000" />
+      <workItem from="1582340431701" duration="7421000" />
+      <workItem from="1582431387688" duration="5525000" />
     </task>
     <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
       <created>1581923377599</created>
@@ -122,6 +114,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="twitter-styled slide menu, animations bugged, fixing tomorrow." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582438152228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582438152228" />
     <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582259615879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
