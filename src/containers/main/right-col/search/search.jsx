@@ -15,7 +15,7 @@ export default class MySearch extends Component {
         listData:[]
     }
     handleSearch = (value) =>{
-        console.log(value)
+        console.log(value);
         this.setState({
             loading:!this.state.loading,
             listData:[
@@ -23,10 +23,10 @@ export default class MySearch extends Component {
                 {create_time:0,content:'',query_key:'',uid:'',id:0,tags:''},
                 {create_time:0,content:'',query_key:'',uid:'',id:0,tags:''}
             ]})
-        console.log('loading state changed on SEARCH'+this.state.loading)
-        const url = BASEURL+'/notes'
-        const token = cookie.load('token')
-        let prom
+        console.log('loading state changed on SEARCH'+this.state.loading);
+        const url = BASEURL+'/notes';
+        const token = cookie.load('token');
+        let prom;
         if(value!==""){
             prom = axios.get(url,{
                 headers:{Authorization:token},
@@ -45,13 +45,12 @@ export default class MySearch extends Component {
             })
         }
         prom.then((res)=>{
-            console.log(res)
             this.setState({
                 loading:!this.state.loading,
                 listData:res.data
             })
         }).catch((err)=>{
-            console.log(err)
+            console.log(err);
             this.setState({loading:!this.state.loading})
             ErrorMsg('网络错误')
         })

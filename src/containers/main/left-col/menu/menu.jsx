@@ -18,7 +18,10 @@ export default class MyMenu extends Component {
         }
         //this.props.history.push('/settings')
     };
-
+    handleRedirect = (target) =>{
+        console.log('123123')
+        this.props.handleRedirect(target);
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -45,6 +48,7 @@ export default class MyMenu extends Component {
         this.setState({visible:false})
     }
     render(){
+        console.log('1!!!!!!!!!!!!!!!!!!!!'+JSON.stringify(this.props))
         const {visible,loading} = this.state;
         if(this.props.showHeader==='none'){
             return (
@@ -90,8 +94,10 @@ export default class MyMenu extends Component {
                             <span style={{ fontSize: '16px'}}>分享</span>
                         </Menu.Item>
                         <Menu.Item key="4">
-                            <Icon type="calendar" style={{ fontSize: '18px'}}/>
-                            <span style={{ fontSize: '16px'}}>日程</span>
+                            <NavLink to={'/main/timeline'}>
+                                <Icon type="calendar" style={{ fontSize: '18px'}} />
+                                <span style={{ fontSize: '16px'}}>日程</span>
+                            </NavLink>
                         </Menu.Item>
                         <Menu.Item key="5">
                             <Icon type="message" style={{ fontSize: '18px'}}/>
@@ -153,8 +159,10 @@ export default class MyMenu extends Component {
                         <span style={{ fontSize: '16px'}}>分享</span>
                     </Menu.Item>
                     <Menu.Item key="4">
-                        <Icon type="calendar" style={{ fontSize: '18px'}}/>
-                        <span style={{ fontSize: '16px'}}>日程</span>
+                        <NavLink to={'/main/timeline'}>
+                            <Icon type="calendar" style={{ fontSize: '18px'}} />
+                            <span style={{ fontSize: '16px'}}>日程</span>
+                        </NavLink>
                     </Menu.Item>
                     <Menu.Item key="5">
                         <Icon type="message" style={{ fontSize: '18px'}}/>

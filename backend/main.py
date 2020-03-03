@@ -81,7 +81,7 @@ def user():
             msg['data'] = '用户名已存在';msg['code'] = 3;msg['detail'] = repr(e)
         return jsonify(msg)
     elif request.method == 'GET':# validate token before response --------EXpects token input.
-        token = request.headers.get('token')
+        token = request.headers.get('Authorization')
         print('---------------------'+token)
         try:
             data = tjwss.loads(token)

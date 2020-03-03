@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/timeline/timeline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/timeline/timeline.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-logout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-logout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-psw-change.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-psw-change.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/left-col/left-col.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/left-col/left-col.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/left-col/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/main-page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-history.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-history.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-keys.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-keys.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/right-col/search/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/right-col/search/search.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +37,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -95,6 +103,14 @@
       <workItem from="1582259409581" duration="4582000" />
       <workItem from="1582340431701" duration="7421000" />
       <workItem from="1582431387688" duration="5525000" />
+      <workItem from="1582527747541" duration="128000" />
+      <workItem from="1582528190805" duration="825000" />
+      <workItem from="1582535489326" duration="901000" />
+      <workItem from="1582595670951" duration="9000" />
+      <workItem from="1582595700395" duration="15000" />
+      <workItem from="1582708132756" duration="24000" />
+      <workItem from="1583151362894" duration="8122000" />
+      <workItem from="1583237297986" duration="4309000" />
     </task>
     <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
       <created>1581923377599</created>
@@ -122,18 +138,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582259615879" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582084107635">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583241624538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582084107635" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583241624538" />
     <state x="560" y="112" key="CommitChangelistDialog2" timestamp="1581923377073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581923377073" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1582273260671">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1582595677976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582273260671" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582595677976" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581831097375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

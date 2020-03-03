@@ -11,6 +11,7 @@ import './main-page.css'
 import Settings from "./setting/setting";
 import MyMenu from "../../../left-col/menu/menu";
 import {Motion, spring} from "react-motion";
+import MyTimeLine from "./timeline/timeline";
 export default class MainPage extends Component {
     state = {
         sideMenuDisp:'none',
@@ -33,13 +34,14 @@ export default class MainPage extends Component {
                     <div className="panel">
                         <Col md={24} sm={24} xs={24} onClick={this.toggleSideMenu}>
                             <HeaderMidMainDisp location={location} />
-                            <hr/>
+                            <hr style={{margin:0}}/>
                         </Col>
                         <Switch>
                             <Route path='/main/front' component={FrontNotes}/>
                             <Route path='/main/alert' component={Alerts}/>
                             <Route path='/main/search' component={MySearch}/>
                             <Route path='/main/settings' component={Settings}/>
+                            <Route path='/main/timeline' component={MyTimeLine}/>
                             <Redirect to='/main/front'/>
                         </Switch>
                     </div>

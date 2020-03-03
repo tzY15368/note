@@ -20,6 +20,9 @@ class Main extends Component {
     ToSettings = () =>{
         this.props.history.push('/main/settings')
     };
+    handleRedirect = (target)=>{
+        this.props.history.push(target)
+    };
     render(){
         const token = cookie.load('token');
         if(token===undefined)
@@ -30,9 +33,8 @@ class Main extends Component {
             <Row>
                 <Col md={{span:3,offset:3}} sm={0} xs={0} style={{position:"fixed",overflow:"hidden","zIndex":"1"}}>
                     <div >
-                        <LeftCol ToSettings={this.ToSettings}/>
+                        <LeftCol ToSettings={this.ToSettings} handleRedirect={this.handleRedirect}/>
                     </div>
-
                 </Col>
                 <Col md={{span:9,offset:6}} >
                     <MainDisp/>
