@@ -90,9 +90,19 @@ def user():
             msg['code'] = 5; msg['detail'] = repr(e);msg['data'] ='token expired.'
         return jsonify(msg)
     elif request.method == 'DELETE':#expects token input to delete user.
-        pass
+        msg['code'] = -1 
+        msg['data'] = 'unexpected input'  
+        status_code = 500
+        response = make_response(json.dumps(msg), status_code)
+        response.headers["Content-Type"] = "application/json"
+        return response
     elif request.method == 'PUT':#expects token input and updates user info.
-        pass
+        msg['code'] = -1 
+        msg['data'] = 'unexpected input'  
+        status_code = 500
+        response = make_response(json.dumps(msg), status_code)
+        response.headers["Content-Type"] = "application/json"
+        return response
     '''
     else:
         msg['code'] = -1 
@@ -111,7 +121,31 @@ def checkauth():
         return (1,data) 
     except Exception as e:
         print(e)
-        return (0,'token expired')    
+        return (0,'token expired')
+@app.route('/timeline',methods=['GET'])
+def notes_timeline():
+    msg = {'success':0,'data':{},'code':0,'detail':{}}
+    auth = checkauth()
+    if auth[0] == 0:
+        status_code = 403
+        msg['data'] = auth[1]
+        response = make_response(json.dumps(msg), status_code)
+        response.headers["Content-Type"] = "application/json"
+        return response
+    else: 
+        userinfo = auth[1]
+    if request.method=='GET':
+        start = request.values.get('start')
+        end = request.values.get('end')
+        user_id = userinfo['id']
+        info = Notes.query.filter(Notes.user_id==user_id).filter(Notes.alert_time>=start).filter(Notes.alert_time<=end).all()
+        a = []
+        for u in info:
+            u = u.__dict__
+            u.pop('_sa_instance_state')
+            a.append(u)
+        msg['data'] = info;msg['success'] = 1;msg['code'] = 1001
+        return jsonify(msg) 
 @app.route('/notes',methods=['PUT','GET','DELETE','POST'])
 def notes_page():
     msg = {'success':0,'data':{},'code':0,'detail':{}}
@@ -143,14 +177,14 @@ def notes_page():
         try:
             db.session.add(note)
             db.session.commit()
-            msg['success'] =1;msg['data'] ='提交成功';msg['code'] =1001;msg['detail'] = Notes.query.filter(Notes.uid==uid).first().id
+            msg['success'] =1;msg['data'] ='提交成功';msg['code'] =1001;msg['detail'] = Notes.query.filter(Notes.user_id==userinfo['id']).filter(Notes.uid==uid).first().id
         except Exception as e:
             db.session.rollback()
             msg['data'] ='失败';msg['code'] = 6;msg['detail'] = repr(e)
         return jsonify(msg)
     elif request.method == 'DELETE':
         id = request.values.get('id')
-        note = Notes.query.filter(Notes.id==id).first()
+        note = Notes.query.filter(Notes.user_id==userinfo['id']).filter(Notes.id==id).first()
         try:
             db.session.delete(note)
             db.session.commit()
@@ -165,7 +199,7 @@ def notes_page():
         if request.values.get('p'):#是否指定第几页
             page = int(request.values.get('p'))
         if request.values.get('f'):#带了f参数则返回带了front tag的Notes
-            info = Notes.query.filter(Notes.front==True).order_by(Notes.create_time.desc()).paginate(page, per_page=10, error_out = False)
+            info = Notes.query.filter(Notes.front==True).filter(Notes.user_id==userinfo['id']).order_by(Notes.create_time.desc()).paginate(page, per_page=10, error_out = False)
             a = []
             for u in info.items:
                 u = u.__dict__
@@ -176,7 +210,7 @@ def notes_page():
         if query_value != None:
         #模糊查找
             q_obj = request.values.get('o')
-            info = Notes.query.filter(Notes.query_key.like('%'+q_obj+'%')).all()
+            info = Notes.query.filter(Notes.user_id==userinfo['id']).filter(Notes.query_key.like('%'+q_obj+'%')).all()
             a = []
             for u in info:
                 u = u.__dict__
@@ -184,7 +218,7 @@ def notes_page():
                 a.append(u)
             return jsonify(a) 
         else:
-            info = Notes.query.order_by(Notes.create_time.desc()).paginate(page, per_page=10, error_out = False)
+            info = Notes.query.filter(Notes.user_id==userinfo['id']).order_by(Notes.create_time.desc()).paginate(page, per_page=10, error_out = False)
             a = []
             for u in info.items:
                 u = u.__dict__
@@ -206,7 +240,7 @@ def notes_page():
             alert = True
             alert_time = json_data.get('alert_time')
         upd_id = json_data.get('updateId')
-        Notes.query.filter(Notes.id==upd_id).update({'content':content,\
+        Notes.query.filter(Notes.user_id==userinfo['id']).filter(Notes.id==upd_id).update({'content':content,\
             'query_key':query_key,'tags':tags,'front':front,'alert':alert,'alert_time':alert_time})
         try:
             db.session.commit()

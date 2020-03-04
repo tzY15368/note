@@ -98,16 +98,16 @@ export default class MyTimeLine extends Component {
                 <Col md={{span:22,offset:1}} sm={0} xs={0} style={{marginTop:10}}>
                     <Carousel afterChange={this.onCarouselChange} ref={el => (this.slider = el)} dots={false}>
                         <div>
-                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading}/>
+                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading} isTimeline={true}/>
                         </div>
                         <div>
-                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading}/>
+                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading} isTimeline={true}/>
                         </div>
                         <div>
-                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading}/>
+                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading} isTimeline={true}/>
                         </div>
                         <div>
-                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading}/>
+                            <MyDisplayer newListData = {this.state.listData} loadingState = {loading} isTimeline={true}/>
                         </div>
                     </Carousel>
                 </Col>

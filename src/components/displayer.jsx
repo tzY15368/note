@@ -17,6 +17,7 @@ class MyDisplayer extends Component {
         modalQuery_key:'',
         modalTargetId:0,
         pagination:false,
+        isTimeline:this.props.isTimeline,
         listData:[/*
             {create_time:0,content:'',query_key:'',uid:'',id:0,tags:''},
             {create_time:0,content:'',query_key:'',uid:'',id:0,tags:''},
@@ -203,10 +204,15 @@ class MyDisplayer extends Component {
                                 <Skeleton loading={loading} active avatar={skeletonAvatar}>
                                     <List.Item.Meta
                                         //avatar={<Avatar src={item.userId} />}
-                                        title={item.query_key+"\r"+js_date_time(item.create_time*1000)}
+                                        title={
+                                            this.state.isTimeline===true?
+                                                js_date_time(item.alert_time*1000)+"\r"+item.query_key:
+                                                item.query_key+"\r"+js_date_time(item.create_time*1000)
+                                        }
+                                        //title={item.query_key+"\r"+js_date_time(item.create_time*1000)}
                                     />{/*
                                 {item.content}*/}
-                                    <div dangerouslySetInnerHTML={{__html: item.content}} style={{overflowX:"auto"}}></div>
+                                    <div dangerouslySetInnerHTML={{__html: item.content+'<br/><h5><i>'+'创建时间：'+js_date_time(item.create_time*1000)+'</i></h5>'}} style={{overflowX:"auto"}}/>
                                 </Skeleton>{/*
                             */}
                             </List.Item>
