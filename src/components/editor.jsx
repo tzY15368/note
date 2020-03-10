@@ -8,6 +8,7 @@ import {ErrorMsg, SuccessMsg} from "./notifications";
 import './editor.css'
 import {connect} from "react-redux";
 import {SetNewNote} from "../redux/actions";
+import {encryptWithKey} from "../utils/encrypts";
 class MyEditor extends Component {
     componentWillMount = () => {
         const token = cookie.load('token')
@@ -61,7 +62,7 @@ class MyEditor extends Component {
     }
     doSubmit = () =>{
         if(this.state.token!==undefined){
-            var that = this
+            let that = this;
             const {contentInput,keyInput} = this.state
             if(contentInput==="" || keyInput===""){
                 ErrorMsg("Empty!")

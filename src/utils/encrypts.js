@@ -10,15 +10,15 @@ export const encrypt = (word) => {
         padding: CryptoJS.pad.Pkcs7
     });
     return encrypted.toString();
-}
+};
 /**
  * 解密
  */
 export const decrypt = (word) => {
-    let key = CryptoJS.enc.Utf8.parse("aaiul453bb15");
+    let key = CryptoJS.enc.Utf8.parse("46cc793c53dc451b");
     let decrypt = CryptoJS.AES.decrypt(word, key, {
         mode: CryptoJS.mode.ECB,
         padding: CryptoJS.pad.Pkcs7
     });
     return CryptoJS.enc.Utf8.stringify(decrypt).toString();
-}
+};

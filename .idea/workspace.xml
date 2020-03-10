@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d427ed15-266b-4ea2-9cc3-91ad1a6125ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/displayer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/displayer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/timeline/timeline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/timeline/timeline.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/before-auth/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-keys.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/mid-col/main-disp/main-page/setting/setting-pages/security/security-keys.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/encrypts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/encrypts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +109,9 @@
       <workItem from="1582708132756" duration="24000" />
       <workItem from="1583151362894" duration="8122000" />
       <workItem from="1583237297986" duration="5008000" />
-      <workItem from="1583328867863" duration="949000" />
+      <workItem from="1583328867863" duration="1069000" />
+      <workItem from="1583330110503" duration="44000" />
+      <workItem from="1583808932158" duration="5247000" />
     </task>
     <task id="LOCAL-00001" summary="twitter-styled slide menu, animations bugged, fixing tomorrow.">
       <created>1581923377599</created>

@@ -8,6 +8,7 @@ import {ErrorMsg} from "../../components/notifications"
 import {ValidateEmail} from "../../utils/validator";
 import {encrypt} from "../../utils/encrypts";
 import LoginFrom from "./login-from";
+import js_date_time from "../../utils/datetime";
 export default class Login extends React.Component{
   state = {
     email:'',
@@ -22,10 +23,34 @@ export default class Login extends React.Component{
     loginAlertMsg:'',
     modalLoading: false,
     modalVisible: false,
-    avatarSrc:''
+    avatarSrc:'',
+    tokenExists:false,
+    currentUserInfo:{}
+  };
+  componentDidMount =()=> {
+    let token = cookie.load('token');
+    const url = BASEURL+'/user';
+    if(token!==undefined){
+      this.setState({tokenExists:true});
+      axios.get(url, {
+        headers:{Authorization:token}
+      }).then((res)=>{
+        if(res.data.code===1001){
+          this.setState({currentUserInfo:res.data.data,tokenExists:true})
+        } else {
+          this.setState({tokenExists:false})
+        }
+      }).catch((err)=>{
+        ErrorMsg('网络错误');
+        this.setState({tokenExists:false})
+      })
+    }
   };
   error = (content) => {
     message.error(content);
+  };
+  handleClearLogin = ()=>{
+    cookie.remove('token');
   };
   handleChange = (e)=>{
   if (e.target.name==='password'){
@@ -42,9 +67,11 @@ export default class Login extends React.Component{
     }
   };
   handleSubmit = (e) =>{
-    e.preventDefault()
-    //console.log(this.state);
-    const {email,password} = this.state;
+    e.preventDefault();
+    const {email,password,tokenExists} = this.state;
+    if(tokenExists){
+      this.setState({redirect:true,})
+    }
     if(password&&email){
       if(ValidateEmail(email)){
         this.setState({submitLoading:true});
@@ -97,9 +124,10 @@ export default class Login extends React.Component{
       modalVisible:true
     })
   }
-
+  ToggleTokenExist = ()=>{
+    this.setState({tokenExists:!this.state.tokenExists});
+  };
   render() {
-
     if(this.state.redirect===true){
       return(
           <Redirect push to="/main"/>
@@ -129,7 +157,7 @@ export default class Login extends React.Component{
               </LoginFrom>
             </Modal>
               <form className="form-horizontal">
-                <div className="form-group">
+                <div className="form-group" style={this.state.tokenExists===false?{display:'block'}:{display:'none'}}>
                   <Input
                       prefix={<Icon type="mail"/>}
                       placeholder="Enter your email"
@@ -153,7 +181,7 @@ export default class Login extends React.Component{
                       style={{marginTop:"10px",display:emailRequired}}
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group" style={this.state.tokenExists===false?{display:'block'}:{display:'none'}}>
                   <Input.Password
                       prefix={<Icon type="lock"/>}
                       name="password"
@@ -176,6 +204,16 @@ export default class Login extends React.Component{
                       style={{marginTop:"10px",display:passwordRequired}}
                   />
                 </div>
+                <div className={'form-group'} style={this.state.tokenExists===true?{display:'block'}:{display:'none'}}>
+                  <p>当前用户：</p>
+                  <p>{this.state.currentUserInfo.email}</p>
+                  <p>签发时间：{js_date_time(this.state.currentUserInfo.log_time*1000)}&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Button type={'link'} onClick={this.handleClearLogin}>注销</Button>
+                  </p>
+                  <p>
+                    <Button type={'link'} onClick={this.ToggleTokenExist}>这不是您？</Button>
+                  </p>
+                </div>
                 <div className="form-group">
                   <Button
                       type="primary"
@@ -183,7 +221,7 @@ export default class Login extends React.Component{
                       icon="check"
                       onClick={this.handleSubmit}
                       loading={this.state.submitLoading}
-                  >Submit</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  >登陆</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   Login with
                   <Tooltip placement="topLeft" title="Bit account" arrowPointAtCenter>
                     <Button type="link" size="small" onClick={this.loginWith.bind(this,'bit')}>

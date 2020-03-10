@@ -26,7 +26,7 @@ export const GetUserInfo = () =>{
         if(token!==undefined) {
             console.log('willstart axios;'+url)
             const response = await axios.get(url, {
-                headers:{token:token}
+                headers:{Authorization:token}
             })
             //console.log('response:'+JSON.stringify(response))
             const result = response.data
