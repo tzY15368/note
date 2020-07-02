@@ -23,6 +23,7 @@ export default class SettingMenuDesktop extends Component {
                             <span>资料</span>
                         </span>
                     }
+                    onTitleClick={this.handleClick.bind(this,'/main/settings/profile/amend')}
                 >
                     <Menu.Item key="5" onClick={this.handleClick.bind(this,'/main/settings/profile/amend')}><Icon type="edit"/>修改资料</Menu.Item>
                     {/*<Menu.Item key="6">Option 6</Menu.Item>*/}
@@ -52,11 +53,9 @@ export default class SettingMenuDesktop extends Component {
                                 <span>隐私</span>
                             </span>
                     }
+                    onTitleClick={this.handleClick.bind(this,'/main/settings/privacy')}
                 >
-                    <Menu.Item key="13">Option 9</Menu.Item>
-                    <Menu.Item key="14">Option 10</Menu.Item>
-                    <Menu.Item key="15">Option 11</Menu.Item>
-                    <Menu.Item key="16">Option 12</Menu.Item>
+                    <Menu.Item key="13"><Icon type="edit"/>修改隐私设置</Menu.Item>
                 </SubMenu>
             </Menu>
         )

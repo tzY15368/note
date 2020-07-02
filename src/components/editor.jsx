@@ -126,16 +126,16 @@ class MyEditor extends Component {
                     }
                 }
                 else {
-                    console.log('starting PUT:' +this.state.updateId)
+                    //console.log('starting PUT:' +this.state.updateId)
                     this.setState({loading:!this.state.loading})
                     const url = BASEURL+'/notes'
-                    console.log(JSON.stringify(this.state))
+                    //console.log(JSON.stringify(this.state))
                     const note = {
                         id: this.state.updateId,
                         query_key: this.state.keyInput,
                         content: this.state.contentInput
                     }
-                    console.log('==============='+JSON.stringify(note))
+                    //console.log('==============='+JSON.stringify(note))
                     axios.put(url,{
                         updateId:this.state.updateId,
                         content:this.state.contentInput,

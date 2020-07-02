@@ -4,7 +4,7 @@ import {Col,Row} from 'antd';
 import SettingMenuDesktop from "./setting-menu/setting-menu-desktop";
 import {Redirect, Route, Switch} from "react-router-dom";
 import MyProfile from "./setting-pages/profile/profile-amend";
-import MyPrivacy from "./setting-pages/privacy/privacy";
+import MyPrivacy from "./setting-pages/privacy/my-privacy";
 import MySecurity from "./setting-pages/security/my-security";
 import {GetUserInfo} from '../../../../../../redux/actions'
 class Settings extends Component {
@@ -24,7 +24,7 @@ class Settings extends Component {
                 <Col md={9}  xs={0} sm={0} >
                     <SettingMenuDesktop handleRedirect={this.handleRedirect}/>
                 </Col>
-                <Col md={{span:14,offset:1}}  xs={0} sm={0} >
+                <Col md={{span:14,offset:1}}  xs={0} sm={0} style={{marginTop:10}}>
                     <Switch>
                         <Route path='/main/settings/privacy' component={MyPrivacy}/>
                         <Route path='/main/settings/profile' component={MyProfile}/>

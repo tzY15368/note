@@ -25,8 +25,8 @@ export default class LogOut extends Component {
                 )
         }
         return (
-            <div>
-                <Button block type={'danger'} size={"large"} icon={'logout'} onClick={this.showConfirm}>注销</Button>
+            <div style={{"marginTop":20}}>
+                <Button block type={'danger'} size={"large"} icon={'logout'} onClick={this.showConfirm} style={{width:'75%',marginLeft:'10%',marginRight:'15%'}}>注销</Button>
             </div>
         )
     }
